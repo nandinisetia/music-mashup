@@ -1,0 +1,103 @@
+{% comment %} {% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mashup</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+
+  </head>
+  <body>
+    <form method="POST" enctype="multipart/form-data">
+       
+        {% csrf_token %}
+  
+      <label for="singer-name">Singer Name:</label>
+      <input type="text" id="singer-name" name="singer-name">
+
+      <label for="number-of-songs">Number of Songs:</label>
+      <input type="text" id="number-of-songs" name="number-of-songs">
+
+      <label for="number-of-seconds">Number of Seconds:</label>
+      <input type="text" id="number-of-seconds" name="number-of-seconds">
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email">
+
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html> {% endcomment %}
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Mashup</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'style.css' %}" />
+</head>
+<body>
+
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="https://blush.design/api/download?shareUri=AM56ft9HNIGaIXYS&c=Hair_0%7Effc943-0.2%7E878787_Skin_0%7E7d4439-0.2%7Eecafa3&w=800&h=800&fm=png" alt="IMG">
+			</div>
+
+			<!-- <form class="contact1-form validate-form">
+				<span class="contact1-form-title">
+					Combo Deals
+				</span> -->
+
+				<div class="content flex">
+		    <form method="POST" enctype="multipart/form-data">
+
+		      {% csrf_token %}
+					<div class="heading">
+						<h1>Music Mashup</h1>
+
+					</div>
+					<div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+		        <label for="email"></label>
+		        <input class="input1" type="email" name="email" placeholder="Enter Email" required spellcheck="false"/>
+						<span class="shadow-input1"></span>
+					</div>
+
+					<div class="wrap-input1 validate-input">
+		        <label for="singer-name"></label>
+		        <input class="input1" type="text" name= "singer-name" placeholder="Enter Singer Name" required spellcheck="false"/>
+						<span class="shadow-input1"></span>
+					</div>
+
+          <div class="wrap-input1 validate-input">
+		        <label for="number-of-seconds"></label>
+		        <input class="input1" type="text" name= "number-of-seconds" placeholder="Enter Number of Seconds" required spellcheck="false"/>
+						<span class="shadow-input1"></span>
+					</div>
+
+					<div class="wrap-input1 validate-input">
+		        <label for="number-of-songs"></label>
+		        <input class="input1" type="text" name= "number-of-songs" placeholder="Enter Number of Songs" required spellcheck="false"/>
+						<span class="shadow-input1"></span>
+					</div>
+
+			
+		        <br>
+		        {% comment %} <a href="/static/sampleData.csv" download>
+		            Download sample data file by clicking here
+		        </a> {% endcomment %}
+						<div class="container-contact1-form-btn">
+		        <button class="contact1-form-btn" style="margin-top:30px">Submit</button>
+						</div>
+		    </form>
+		    </div>
+		</div>
+	</div>
+
+
+</body>
+</html>
