@@ -13,7 +13,13 @@ The program for this project has been written in Python using following librarie
 - **pydub**- pydub is a Python library for working with audio files. It provides a high-level interface for audio processing, allowing you to easily load, manipulate, and save audio files in various formats. With pydub, you can perform operations such as slicing, concatenating, and exporting audio files to different formats. It also supports audio formats such as MP3, WAV, and FLAC. pydub is easy to use and offers a lot of functionality for audio manipulation, making it a popular choice for audio processing in Python.
 
 
+## User Input Required
+- Email Id
+- Singer Name
+- Number of Songs
+- Number of Seconds
 
+The output generated will be sent via mail.
 
 ## Screenshots
 
